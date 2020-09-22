@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
-import App from './App.js';
+import { ErrorBoundary } from './components/ErrorBoundary/ErrorNoundary.jsx';
+import Routes from './routes.jsx';
 import * as serviceWorker from './serviceWorker.js';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ErrorBoundary render={() => <h1>Oooh Nooo! An error occurred to the open app.</h1>}>
+			<Routes />
+		</ErrorBoundary>
 	</React.StrictMode>,
 	document.getElementById(`root`)
 );

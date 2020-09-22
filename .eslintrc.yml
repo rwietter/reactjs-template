@@ -84,6 +84,7 @@ rules:
     import/namespace: 1,
     import/default: 1,
     import/export: 1,
+    import/prefer-default-export: 'off',
     import/no-useless-path-segments: 1,
     semi: 'error',
     import-helpers/order-imports:
